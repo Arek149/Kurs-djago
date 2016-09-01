@@ -1,0 +1,2 @@
+# Kurs-djago
+Pierwszy kurs
