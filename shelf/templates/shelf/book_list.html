@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+<ul>
+{% for book in object_list %}
+    <li><a href="{% url 'shelf:book-detail' book.id %}">{{ book.title }} -
+        {% for author in book.authors.all %}
+            {{ authot.first_name }} {{  author.last_name }}
+            {% if not forloop  %}, {% endif %}
+        {% endfor %}
+    </li>
+{% endfor %}
+</ul>
+
+
+{% endblock %}
